@@ -93,6 +93,7 @@
     <br />
 <asp:Button ID="btn_search" runat="server" OnClick="btn_search_Click" Text="Search" />
 <asp:Button ID="btn_edit" runat="server" OnClick="btn_edit_Click" Text="Edit" />
+<asp:Button ID="btn_addNewUser" runat="server" OnClick="btn_addNewUser_Click" Text="Add User" />    
     <br />
 <asp:Label ID="lbl_XML_output" runat="server" Text=""></asp:Label>
     <br />

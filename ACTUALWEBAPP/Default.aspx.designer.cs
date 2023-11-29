@@ -213,6 +213,15 @@ namespace ACTUALWEBAPP
         protected global::System.Web.UI.WebControls.Button btn_edit;
 
         /// <summary>
+        /// btn_addNewUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_addNewUser;
+
+        /// <summary>
         /// lbl_XML_output control.
         /// </summary>
         /// <remarks>
