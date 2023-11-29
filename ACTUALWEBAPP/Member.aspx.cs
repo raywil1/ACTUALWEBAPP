@@ -35,8 +35,8 @@ namespace ACTUALWEBAPP
 
             string[] output = coordinateAndCostLivingService.getCoordinates(city, state, country);
 
-            Label1.Text = "Latitude" + output[1];
-            Label8.Text = "Longitude" + output[2];
+            LatitudeLabel.Text = "Latitude: " + output[1];
+            LongitudeLabel.Text = "Longitude: " + output[2];
         }
 
         // ERICS SERVICES
@@ -50,12 +50,12 @@ namespace ACTUALWEBAPP
 
             if (output.Length == 6)
             {
-                Label2.Text = "Cost of Living Index: " + output[0];
-                Label3.Text = "Rent Index: " + output[1];
-                Label4.Text = "Cost of Living and Rent Index: " + output[2];
-                Label5.Text = "Groceries Index: " + output[3];
-                Label6.Text = "Restaurant Price Index: " + output[4];
-                Label7.Text = "Local Purchasing Power Index: " + output[5];
+                CostLivingIndexLabel.Text = "Cost of Living Index: " + output[0];
+                RentIndexLabel.Text = "Rent Index: " + output[1];
+                CostLivingAndRentLabel.Text = "Cost of Living and Rent Index: " + output[2];
+                GroceriesIndexLabel.Text = "Groceries Index: " + output[3];
+                RestaurantPriceLabel.Text = "Restaurant Price Index: " + output[4];
+                LocalPurchasingLabel.Text = "Local Purchasing Power Index: " + output[5];
             }
             else
             {
