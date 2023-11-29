@@ -249,22 +249,22 @@ namespace ACTUALWEBAPP
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// Label6 control.
+        /// LatitudeLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label LatitudeLabel;
 
         /// <summary>
-        /// Label8 control.
+        /// LongitudeLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label LongitudeLabel;
 
         /// <summary>
         /// TextBox4 control.
@@ -303,58 +303,58 @@ namespace ACTUALWEBAPP
         protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
-        /// Label7 control.
+        /// CostLivingIndexLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label CostLivingIndexLabel;
 
         /// <summary>
-        /// Label9 control.
+        /// RentIndexLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label RentIndexLabel;
 
         /// <summary>
-        /// Label10 control.
+        /// CostLivingAndRentLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label CostLivingAndRentLabel;
 
         /// <summary>
-        /// Label11 control.
+        /// GroceriesIndexLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.Label GroceriesIndexLabel;
 
         /// <summary>
-        /// Label12 control.
+        /// RestaurantPriceLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.Label RestaurantPriceLabel;
 
         /// <summary>
-        /// Label13 control.
+        /// LocalPurchasingLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.WebControls.Label LocalPurchasingLabel;
 
         /// <summary>
         /// tbx_zipcode control.
