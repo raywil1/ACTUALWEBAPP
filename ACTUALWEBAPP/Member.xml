@@ -1,19 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Members>
-	<Member>
-		<Name>Alice Johnson</Name>
-		<Password>password1</Password>
-	</Member>
-	<Member>
-		<Name>Bob Smith</Name>
-		<Password>password1</Password>
-	</Member>
-	<Member>
-		<Name>Eve Davis</Name>
-		<Password>password1</Password>
-	</Member>
-	<Member>
-		<Name>TA</Name>
-		<Password>Cse44598!</Password>
-	</Member>
+  <Member>
+    <Name>Alice Johnson</Name>
+    <Password>password1</Password>
+  </Member>
+  <Member>
+    <Name>Bob Smith</Name>
+    <Password>password1</Password>
+  </Member>
+  <Member>
+    <Name>Eve Davis</Name>
+    <Password>password1</Password>
+  </Member>
+  <Member>
+    <Name>TA</Name>
+    <Password>Cse44598!</Password>
+  </Member>
+  <Member>
+    <Name>miles</Name>
+    <Password>1234</Password>
+  </Member>
+  <Member>
+    <Name>james</Name>
+    <Password>0000</Password>
+  </Member>
 </Members>
