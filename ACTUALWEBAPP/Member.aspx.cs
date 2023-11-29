@@ -177,7 +177,17 @@ namespace ACTUALWEBAPP
         {
             //Change
             ForecastAndAlertService.Service1Client newService = new ForecastAndAlertService.Service1Client();
-            lbl_alerts.Text = newService.getWeatherAlerts(tbx_state.Text);
+            string returnedAlert = newService.getWeatherAlerts(tbx_state.Text);
+
+            if (returnedAlert.Length <= 2)
+            {
+                lbl_alerts.Text = "There are no headlines available.";
+
+            }
+            else
+            {
+                lbl_alerts.Text = returnedAlert;
+            }
         }
     }
 }
