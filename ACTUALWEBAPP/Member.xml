@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Members>
+	<Member>
+		<Name>Alice Johnson</Name>
+		<Password>password1</Password>
+	</Member>
+	<Member>
+		<Name>Bob Smith</Name>
+		<Password>password1</Password>
+	</Member>
+	<Member>
+		<Name>Eve Davis</Name>
+		<Password>password1</Password>
+	</Member>
+	<Member>
+		<Name>TA</Name>
+		<Password>Cse44598!</Password>
+	</Member>
+</Members>

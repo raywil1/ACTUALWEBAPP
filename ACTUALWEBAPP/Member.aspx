@@ -3,6 +3,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main>   
+
+        <!-- RAYHAN SERVICES -->
         <!-- Solar Intensity Service Section from project 3 -->
         <div class="row">
             <section class="col-md-4" aria-labelledby="solarIntensityTitle">
@@ -57,26 +59,97 @@
             </section>
         </div>
 
-   <%--  this section was fron Project 3   <!-- Food Recommendations Section -->
-        <div class="row">
-            <section class="col-md-4" aria-labelledby="foodRecTitle">
-                <h2 id="foodRecTitle">Food Recommendations</h2>
-                <p>Enter a city to get food recommendations. URl:http://webstrar48.fulton.asu.edu/page4/Service1.svc</p>
-                <asp:TextBox ID="txtCity" runat="server" Placeholder="Enter City"></asp:TextBox>
-                <asp:Button ID="btnGetRecommendations" runat="server" Text="Get Recommendations" OnClick="btnGetRecommendations_Click" />
-                <asp:Label ID="lblResult" runat="server"></asp:Label>
-            </section>
-        </div>
+   
 
-        <!--this section was from project 3 Local Events Recommendations Section -->
+
+
+         <!--ERIC'S SERVICES -->
         <div class="row">
-            <section class="col-md-4" aria-labelledby="eventsTitle">
-                <h2 id="eventsTitle">Local Events Recommendations</h2>
-                <p>Enter a city. URL:http://webstrar48.fulton.asu.edu/page4/Service1.svc</p>
-                <asp:TextBox ID="txtCityForEvents" runat="server" Placeholder="Enter City"></asp:TextBox>
-                <asp:Button ID="btnGetEvents" runat="server" Text="Get Events" OnClick="btnGetEvents_Click" />
-                <asp:Label ID="lblEventsResult" runat="server"></asp:Label>
-            </section>
-        </div>--%>
+        <div class="col-md-4">
+            <h2>Latitude and Longitude</h2>
+            <p>Latitude and Longitude Service will take in a location (city, state, country) and return the latitude and longitude of that location. State may be optional depending on location (outside of the United States).</p>
+            <p>Methods: GetLatitudeLongitude(string city, string state, string country) -&gt; string[]</p>
+            <p>url : localhost</p>
+            <div>
+                <h3>Enter City</h3>
+                <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server"></asp:TextBox>
+                <h3>Enter State</h3>
+                <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server"></asp:TextBox>
+                <h3>Enter Country</h3>
+                <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server"></asp:TextBox>
+                <br />
+                <asp:Button CssClass="btn btn-default" ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" />
+                <br />
+                <asp:Label ID="Label6" runat="server" Text="Latitude: "></asp:Label>
+                <br />
+                <asp:Label ID="Label8" runat="server" Text="Longitude: "></asp:Label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>Cost of Living</h2>
+            <p>Cost of living service will take location as input and return the cost of living indices of that location. Data is parsed from a csv file and returned here. State may be optional depending on location.</p>
+            <p>Methods: GetCostOfLiving(string city, string state, string country) -&gt; string[]</p>
+            <p>url : localhost</p>
+            <p>
+                NOTE: Please use full country name format e.g.
+            </p>
+            <p>
+                Boston, MA, United States</p>
+            <p>
+                Hamilton, Bermuda (if no State)</p>
+            <div>
+                <h3>Enter City</h3>
+                <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server"></asp:TextBox>
+                <h3>Enter State (optional)</h3>
+                <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server"></asp:TextBox>
+                <h3>Enter Country</h3>
+                <asp:TextBox CssClass="form-control" ID="TextBox6" runat="server"></asp:TextBox>
+                <br />
+                <asp:Button CssClass="btn btn-default" ID="Button2" runat="server" OnClick="Button2_Click" Text="Go" />
+                <br />
+                <asp:Label ID="Label7" runat="server" Text="Cost of Living Index: "></asp:Label>
+                <br />
+                <asp:Label ID="Label9" runat="server" Text="Rent Index: "></asp:Label>
+                <br />
+                <asp:Label ID="Label10" runat="server" Text="Cost of Living and Rent Index: "></asp:Label>
+                <br />
+                <asp:Label ID="Label11" runat="server" Text="Groceries Index: "></asp:Label>
+                <br />
+                <asp:Label ID="Label12" runat="server" Text="Restaurant Price Index: "></asp:Label>
+                <br />
+                <asp:Label ID="Label13" runat="server" Text="Local Purchasing Power Index: "></asp:Label>
+                <br />
+            </div>     
+    </div>
+            <!--Miles'S SERVICES -->
+
+                <span style="color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration: underline; display: inline !important; float: none;">Forecast Service:</span><br />
+    <span style="color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">url:<span>&nbsp;</span></span><a href="http://webstrar48.fulton.asu.edu/page9/Service1.svc" style="box-sizing: border-box; color: var(--bs-link-color); text-decoration: underline; font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255);">http://webstrar48.fulton.asu.edu/page9/Service1.svc</a><br style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" />
+    <span style="color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Returns a 5 day weather forecast of a given zipcode, some newer zipcodes may not be on it</span><br />
+    <span style="color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">
+    <br />
+    &lt;enter a zipcode&gt;</span><br />
+    <asp:TextBox ID="tbx_zipcode" runat="server">zipcode</asp:TextBox>
+    <asp:Button ID="btn_enter" runat="server" OnClick="btn_enter_Click" Text="Weather Forecast" Height="33px" Width="150px" />
+    <br />
+    <br />
+    <asp:Label ID="lbl_output" runat="server" Text="output"></asp:Label>
+    <br />
+    <br />
+    <br />
+    <span class="text-decoration-underline" style="box-sizing: border-box; text-decoration-line: underline !important; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255);">Alert Service:</span><br style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" />
+    <span style="color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">url:<span>&nbsp;</span></span><a href="http://webstrar48.fulton.asu.edu/page9/Service1.svc" style="box-sizing: border-box; color: var(--bs-link-color); text-decoration: underline; font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255);">http://webstrar48.fulton.asu.edu/page9/Service1.svc</a><br style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" />
+    <span style="color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Returns any weather alerts about a given state, if none, there is no output</span><br style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" />
+    <br style="box-sizing: border-box; color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" />
+    <span style="color: rgb(33, 37, 41); font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">&lt;use state abreviations ie. AZ for Arizona, or FL for Florida&gt;</span><br />
+    <asp:TextBox ID="tbx_state" runat="server" Width="123px">city</asp:TextBox>
+  
+    <asp:Button ID="btn_news" runat="server" OnClick="btn_news_Click" Text="Weather Alerts" Height="34px" Width="125px" />
+<br />
+    <br />
+    <asp:Label ID="lbl_alerts" runat="server" Text="alerts"></asp:Label>
+<br />
+<br />
+
     </main>
 </asp:Content>

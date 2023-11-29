@@ -10,6 +10,7 @@ namespace ACTUALWEBAPP
 {
     public partial class Contact : Page
     {
+        private CoordinateAndCostLivingService.Service1Client coordinateAndCostLivingService = new CoordinateAndCostLivingService.Service1Client();
         protected void Page_Load(object sender, EventArgs e)
         {
             //check if UserProfile cookie exists and sets them to the label text 
@@ -22,6 +23,45 @@ namespace ACTUALWEBAPP
                     SavedPasswordLabel.Text = "Retrieved Password: " + userCookie["Password"];
                 }
             }
+        }
+
+        // ERICS SERVICES
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            string city = TextBox1.Text;
+            string state = TextBox2.Text;
+            string country = TextBox3.Text;
+
+            string[] output = coordinateAndCostLivingService.getCoordinates(city, state, country);
+
+            Label1.Text = "Latitude" + output[1];
+            Label8.Text = "Longitude" + output[2];
+        }
+
+        // ERICS SERVICES
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string city = TextBox4.Text;
+            string state = TextBox5.Text;
+            string country = TextBox6.Text;
+
+            string[] output = coordinateAndCostLivingService.GetCostOfLiving(city, state, country);
+
+            if (output.Length == 6)
+            {
+                Label2.Text = "Cost of Living Index: " + output[0];
+                Label3.Text = "Rent Index: " + output[1];
+                Label4.Text = "Cost of Living and Rent Index: " + output[2];
+                Label5.Text = "Groceries Index: " + output[3];
+                Label6.Text = "Restaurant Price Index: " + output[4];
+                Label7.Text = "Local Purchasing Power Index: " + output[5];
+            }
+            else
+            {
+                Label2.Text = output[0];
+            }
+
         }
         protected void LatitudeTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -122,6 +162,22 @@ namespace ACTUALWEBAPP
             {
                 CrimeLabel.Text = "Invalid year range.";
             }
+
+
+        }
+        protected void btn_enter_Click(object sender, EventArgs e)
+        {
+            //GOOD
+            ForecastAndAlertService.Service1Client newService = new ForecastAndAlertService.Service1Client();
+            lbl_output.Text = newService.Weather5day(tbx_zipcode.Text);
+
+        }
+
+        protected void btn_news_Click(object sender, EventArgs e)
+        {
+            //Change
+            ForecastAndAlertService.Service1Client newService = new ForecastAndAlertService.Service1Client();
+            lbl_alerts.Text = newService.getWeatherAlerts(tbx_state.Text);
         }
     }
 }
