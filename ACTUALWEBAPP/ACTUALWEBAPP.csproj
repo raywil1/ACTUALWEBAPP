@@ -45,7 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HashLib">
-      <HintPath>..\..\..\..\..\..\Downloads\HashLib.dll</HintPath>
+      <HintPath>..\..\Project5\Project5\HashLib\bin\Debug\HashLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
